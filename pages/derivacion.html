@@ -254,13 +254,8 @@
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../assets/img/illustrations/man-with-laptop-light.png"
-                            height="140"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                          />
+                          <img src="../assets/img/illustrations/man-with-laptop-light.png" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                            data-app-light-img="illustrations/man-with-laptop-light.png"/>
                         </div>
                       </div>
                     </div>
@@ -295,9 +290,19 @@
 
               </div>
 
+
+
               <div class="row" style="border: solid 1px #a2a2a2; border-radius: 5px;">
                 <div class="card">
-                <h5 class="card-header">Listado de reclamos</h5>
+                <h5 class="card-header d-flex justify-content-between">Listado de reclamos derivados
+                  <select class="form-select" style="width: 300px;">
+                    <option value="">Todos</option>
+                    <option value="">Sede Central</option>
+                    <option>Cobranzas</option>
+                    <option>Dirección Lince</option>
+                    <option>Dirección Arequipa</option>
+                  </select>
+                </h5>
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead>
@@ -305,16 +310,17 @@
                         <th style="color: #fff">FECHA</th>
                         <th style="color: #fff">SEDE</th>
                         <th style="color: #fff">CÓDIGO</th>
-                        <th style="color: #fff; text-align: center;">Tipo bien<br>contratado</th>
-                        <th style="color: #fff; text-align: center;">Tipo de<br>reclamación</th>
-                        <th style="color: #fff">Monto</th>
-                        <th style="color: #fff">Reclamante</th>
-                        <th style="color: #fff">Derivación</th>
-                        <th style="color: #fff">Estado</th>
-                        <th style="color: #fff">Acciones</th>
+                        <th style="color: #fff; text-align: center;">TIPO BIEN<br>CONTRATADO</th>
+                        <th style="color: #fff; text-align: center;">TIPO DE<br>RECLAMACIÓN</th>
+                        <th style="color: #fff">MONTO</th>
+                        <th style="color: #fff">RECLAMANTE</th>
+                        <th style="color: #fff">DERIVACIÓN</th>
+                        <th style="color: #fff">PUBLICACIÓN</th>
+                        <th style="color: #fff">ESTADO</th>
+                        <th style="color: #fff">ACCIONES</th>
                       </tr>
                     </thead>
-                    <tbody class="table-border-bottom-0" style="font-size: 13px;">
+                    <tbody class="table-border-bottom-0" style="font-size: 11px;">
                       <tr>
                         <td>22/05/2023</td>
                         <td>SEDE CENTRAL</td>
@@ -325,24 +331,10 @@
                         <td>Fernando Celestino Vargas</td>
                         <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
                         <td><span class="badge bg-label-info me-1 estado">DERIVADO</span></td>
+                        <td><span class="badge bg-label-secondary me-1 estado">SIN PUBLICAR</span></td>
                         <td>
-                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Responder"><i class="bx bxs-user-voice me-2"></i></a>
-                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal2" title="Derivar"><i class="bx bx-log-in-circle me-2"></i></a>
-                        </td>
-                      </tr> 
-                      <tr>
-                        <td>21/05/2023</td>
-                        <td>COCALENOS</td>
-                        <td>2023-000009</td>
-                        <td>SERVICIO</td>
-                        <td>QUEJA</td>
-                        <td>S/. 450.00</td>
-                        <td>Mael Celestino Perez</td>
-                        <td><span class="badge bg-label-warning me-1 estado">SIN DERIVAR</span></td>
-                        <td><span class="badge bg-label-info me-1 estado">DERIVADO</span></td>
-                        <td>
-                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Responder"><i class="bx bxs-user-voice me-2"></i></a>
-                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal2" title="Derivar"><i class="bx bx-log-in-circle me-2"></i></a>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal2" title="Responder"><i class="bx bxs-navigation me-2"></i></a>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -353,11 +345,12 @@
                         <td>RECLAMO</td>
                         <td>S/. 100.00</td>
                         <td>Maribel Perez Peña</td>
-                        <td><span class="badge bg-label-primary me-1 estado">Dirección Lince</span></td>
+                        <td><span class="badge bg-label-danger me-1 estado">Dirección Lince</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -368,11 +361,12 @@
                         <td>QUEJA</td>
                         <td>S/. 150.00</td>
                         <td>Mario Loja Ramirez</td>
-                        <td><span class="badge bg-label-primary me-1 estado">Dirección Arequipa</span></td>
+                        <td><span class="badge bg-label-danger me-1 estado">Dirección Arequipa</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -385,9 +379,10 @@
                         <td>Benjamin Huayra Lopez</td>
                         <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -400,9 +395,10 @@
                         <td>Andrés Lopez Salinas</td>
                         <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -415,9 +411,10 @@
                         <td>Romina Luna Ramos</td>
                         <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr> 
                       <tr class="table-success">
@@ -430,9 +427,10 @@
                         <td>Hector Lopez Perez</td>
                         <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
                         <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">PUBLICADO</span></td>
                         <td>
-                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
-                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Ver reclamo"><i class="bx bx-show me-2"></i></a>
+                          <i class="bx bxs-navigation me-2" title="Responder"></i>
                         </td>
                       </tr>                      
                     </tbody>
@@ -560,7 +558,7 @@
             </div>
 
 
-
+          </div>
             </div>
             <!-- / Content -->
 
