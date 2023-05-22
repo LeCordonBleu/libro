@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Saco Oliveros - Trismegisto</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link href="https://sacooliveros.edu.pe/templates/yoo_gusto/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+    <style type="text/css">
+      .restringido{
+        background-color: #a7a3a3;
+        color: #a7a3a3;
+        margin-top: 2px;
+      }
+
+      .restringir{
+        background-color: #a7a3a3;
+        height: 100%;
+      }
+
+      .restringir-text{
+        color: #d7d7d7;
+        font-weight: 400;
+      }
+
+      body{
+        background-color:#ecf0f5;
+      }
+
+      .estado{
+        border: solid 1px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="https://sacooliveros.edu.pe/images/sacooliveros/Home/logos/logo-saco-1.webp">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2" style="font-size: 16px; text-transform: uppercase;">Trismegisto</span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item ">
+              <a href="index.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Inicio</div>
+              </a>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item active open">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Layouts">Libro de reclamaciones</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item active">
+                  <a href="reclamos.html" class="menu-link">
+                    <div data-i18n="Without menu">Reclamos</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="derivacion.html" class="menu-link">
+                    <div data-i18n="Without navbar">Reclamos derivados</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+           
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <i class="bx bx-search fs-4 lh-0"></i>
+                  <input
+                    type="text"
+                    class="form-control border-0 shadow-none"
+                    placeholder="Search..."
+                    aria-label="Search..."
+                  />
+                </div>
+              </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+                
+
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-semibold d-block">Yessica Perez</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle"><label style="background-color: #707070; color: #707070;">----------------</label></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-cog me-2"></i>
+                        <span class="align-middle"><label style="background-color: #707070; color: #707070;">----------------</label></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                          <span class="flex-grow-1 align-middle"><label style="background-color: #707070; color: #707070;">----------------</label></span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="auth-login-basic.html">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Cerrar sesión</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-8 mb-4 order-0">
+                  <div class="card">
+                    <div class="d-flex align-items-end row">
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">Reclamos</h5>
+                            <div class="restringido" style="height: 103px; border-radius: 5px; padding: 10px;">
+                              <h5 class="m-0 me-2 restringir-text">Información restringida <i class="bx bx-block "></i></h5> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-5 text-center text-sm-left">
+                        <div class="card-body pb-0 px-0 px-md-4">
+                          <img
+                            src="../assets/img/illustrations/man-with-laptop-light.png"
+                            height="140"
+                            alt="View Badge User"
+                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                            data-app-light-img="illustrations/man-with-laptop-light.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 order-1">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12 mb-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-title d-flex align-items-start justify-content-between">
+                            <div class="avatar flex-shrink-0">
+                              <img
+                                src="../assets/img/icons/unicons/chart-success.png"
+                                alt="chart success"
+                                class="rounded"
+                              />
+                            </div>
+                            <div class="dropdown">
+                            </div>
+                          </div>
+                          <span class="fw-semibold d-block mb-1">Último reclamo</span>
+                          <h3 class="card-title mb-2">22/05/2023</h3>
+                          <small class="text-danger fw-semibold"><!--<i class="bx bx-up-arrow-alt"></i>--> Sede: Lince</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <div class="row" style="border: solid 1px #a2a2a2; border-radius: 5px;">
+                <div class="card">
+                <h5 class="card-header">Listado de reclamos</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr style="background-color: #3a7bc4;">
+                        <th style="color: #fff">FECHA</th>
+                        <th style="color: #fff">SEDE</th>
+                        <th style="color: #fff">CÓDIGO</th>
+                        <th style="color: #fff; text-align: center;">Tipo bien<br>contratado</th>
+                        <th style="color: #fff; text-align: center;">Tipo de<br>reclamación</th>
+                        <th style="color: #fff">Monto</th>
+                        <th style="color: #fff">Reclamante</th>
+                        <th style="color: #fff">Derivación</th>
+                        <th style="color: #fff">Estado</th>
+                        <th style="color: #fff">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0" style="font-size: 13px;">
+                      <tr>
+                        <td>22/05/2023</td>
+                        <td>SEDE CENTRAL</td>
+                        <td>2023-000010</td>
+                        <td>SERVICIO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 200.00</td>
+                        <td>Fernando Celestino Vargas</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
+                        <td><span class="badge bg-label-info me-1 estado">DERIVADO</span></td>
+                        <td>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Responder"><i class="bx bxs-user-voice me-2"></i></a>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal2" title="Derivar"><i class="bx bx-log-in-circle me-2"></i></a>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td>21/05/2023</td>
+                        <td>COCALENOS</td>
+                        <td>2023-000009</td>
+                        <td>SERVICIO</td>
+                        <td>QUEJA</td>
+                        <td>S/. 450.00</td>
+                        <td>Mael Celestino Perez</td>
+                        <td><span class="badge bg-label-warning me-1 estado">SIN DERIVAR</span></td>
+                        <td><span class="badge bg-label-info me-1 estado">DERIVADO</span></td>
+                        <td>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal" title="Responder"><i class="bx bxs-user-voice me-2"></i></a>
+                          <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#backDropModal2" title="Derivar"><i class="bx bx-log-in-circle me-2"></i></a>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>21/05/2023</td>
+                        <td>LINCE</td>
+                        <td>2023-000008</td>
+                        <td>PRODUCTO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 100.00</td>
+                        <td>Maribel Perez Peña</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Dirección Lince</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>19/05/2023</td>
+                        <td>AREQUIPA</td>
+                        <td>2023-000007</td>
+                        <td>PRODUCTO</td>
+                        <td>QUEJA</td>
+                        <td>S/. 150.00</td>
+                        <td>Mario Loja Ramirez</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Dirección Arequipa</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>18/05/2023</td>
+                        <td>CENTRAL</td>
+                        <td>2023-000006</td>
+                        <td>PRODUCTO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 195.00</td>
+                        <td>Benjamin Huayra Lopez</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>18/05/2023</td>
+                        <td>CENTRAL</td>
+                        <td>2023-000005</td>
+                        <td>SERVICIO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 550.00</td>
+                        <td>Andrés Lopez Salinas</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>18/05/2023</td>
+                        <td>CENTRAL</td>
+                        <td>2023-000004</td>
+                        <td>PRODUCTO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 200.00</td>
+                        <td>Romina Luna Ramos</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr> 
+                      <tr class="table-success">
+                        <td>18/05/2023</td>
+                        <td>CENTRAL</td>
+                        <td>2023-000003</td>
+                        <td>SERVICIO</td>
+                        <td>RECLAMO</td>
+                        <td>S/. 50.00</td>
+                        <td>Hector Lopez Perez</td>
+                        <td><span class="badge bg-label-primary me-1 estado">Cobranzas</span></td>
+                        <td><span class="badge bg-label-success me-1 estado">RESUELTO</span></td>
+                        <td>
+                          <i class="bx bxs-user-voice me-2"title="Responder"></i>
+                          <i class="bx bx-log-in-circle me-2" title="Derivar"></i>
+                        </td>
+                      </tr>                      
+                    </tbody>
+                  </table>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="modal fade" id="backDropModal" data-bs-backdrop="static" tabindex="-1">
+              <div class="modal-dialog">
+                <form class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="backDropModalTitle">RESPONDER</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label">T. contratado</label>
+                        <input type="text" id="nameBackdrop" class="form-control" placeholder="SERVICIO"  disabled="" />
+                      </div>
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Tipo</label>
+                        <input type="text" id="nameBackdrop" class="form-control" placeholder="RECLAMO"  disabled="" />
+                      </div>
+                      <div class="col mb-0">
+                        <label for="dobBackdrop" class="form-label">Monto</label>
+                        <input type="text" id="nameBackdrop" class="form-control" placeholder="200.00"  disabled="" />
+                      </div>
+                    </div>
+                    <div class="row g-2">
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Descripción</label>
+                        <textarea class="form-control" disabled="">Descripción del reclamo ingresado.</textarea>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row g-2">
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Detalle reclamo</label>
+                        <textarea class="form-control" disabled="">Detalle del reclamo ingresado.</textarea>
+                      </div>
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Pedido</label>
+                        <textarea class="form-control" disabled="">Pedido del reclamo ingresado.</textarea>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row g-2">
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Estado derivación</label>
+                        <input type="text" id="emailBackdrop" class="form-control" placeholder="COBRANZAS"  disabled=""/>
+                      </div>
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Fecha respuesta derivación</label>
+                        <input type="text" id="emailBackdrop" class="form-control" placeholder="22/05/2023"  disabled=""/>
+                      </div>
+                    </div>
+                    <div class="row g-2">
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Detalle de la Respuesta derivada</label>
+                        <textarea class="form-control" disabled="">Detalle de la Respuesta derivada</textarea>
+                      </div>
+                    </div>
+                    <hr>
+
+                    <div class="row g-2">
+                      <div class="col mb-0">
+                        <label for="emailBackdrop" class="form-label">Respuesta para el reclamante</label>
+                        <textarea class="form-control" ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                      Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="closeModal();">Responder</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+
+            <div class="modal fade" id="backDropModal2" data-bs-backdrop="static" tabindex="-1">
+              <div class="modal-dialog">
+                <form class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="backDropModalTitle">DERIVAR</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col mb-3">
+                        <label for="nameBackdrop" class="form-label">ÁREA DERIVADA</label>
+                        <select class="form-control">
+                          <option value="">Seleccione</option>
+                          <option value="">COBRANZAS</option>
+                          <option value="">ADMINISTRACIÓN</option>
+                          <option value="">CONTABILIDAD</option>
+                          <option value="">DIRECCIÓN GENERAL</option>
+                          <option value="">DIRECCIÓN GENERAL PRIMARIA</option>
+                          <option value="">DIRECCIÓN GENERAL SECUNDARIA</option>
+                          <option value="">DIRECCIÓN LINCE</option>
+                          <option value="">DIRECCIÓN AREQUIPA</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                      Cerrar
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="closeModal();">Derivar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+
+
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  © 2023 , Saco Oliveros
+                 </div>
+                
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+  
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
